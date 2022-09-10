@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    line-height: 2em;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: lighter;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    /* max-width: 100%;
+    width: 100%; */
+    object-fit: cover;
+    /* -o-object-position: center center; */
+    object-position: center center;
+}
+
