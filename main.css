@@ -29,7 +29,7 @@
 
 body {
   color: #1d1d1d;
-  font-family: Brandon;
+  font-family: Brandon L;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -65,12 +65,12 @@ header nav ul li {
 header nav ul li ul {
   background: #1d1d1d;
   color: #fff;
-  width: 250px;
+  width: auto;
   text-align: left;
   padding: 10px;
   position: absolute;
   top: 2em;
-  left: 0;
+  right: 1px;
   display: none;
 }
 header nav ul li ul a {
@@ -78,6 +78,10 @@ header nav ul li ul a {
 }
 header nav ul li ul a:hover {
   color: grey;
+}
+header nav ul li ul li {
+  display: block;
+  white-space: nowrap;
 }
 header .shortfilms:hover ul {
   display: block;
@@ -99,6 +103,12 @@ header .about:hover ul {
   background-image: url("src/img/lightyear-hero.jpg");
   background-size: cover;
   padding: 250px;
+}
+@media only screen and (max-width: 600px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 .content {

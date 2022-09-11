@@ -27,7 +27,7 @@ $black-font: #1d1d1d;
 // ----------------
 body {
   color: $black-font;
-  font-family: Brandon;
+  font-family: Brandon L;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -68,12 +68,12 @@ header {
   nav ul li ul {
     background: $black-font;
     color: #fff;
-    width: 250px;
+    width: auto;
     text-align: left;
     padding: 10px;
     position: absolute;
     top: 2em;
-    left: 0;
+    right: 1px;
     display: none;
   }
 
@@ -83,6 +83,11 @@ header {
     &:hover{
       color: grey;
     }
+  }
+
+  nav ul li ul li{
+    display: block;
+    white-space: nowrap;
   }
 
   
