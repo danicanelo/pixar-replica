@@ -8,23 +8,20 @@
   src: url("src/fonts/brandon-grotesque-light.otf");
 }
 
-@keyframes upEffect{
-  0%{
+@keyframes upEffect {
+  0% {
     transform: translateY(1em);
   }
- 
-  100%{
+
+  100% {
     transform: translateY(0em);
   }
 }
 
 $black-font: #1d1d1d;
 
-.up-effect{
-  animation: upEffect 300ms ease-in-out forwards;
-}
+// ----------------------------------------------
 
-// ----------------
 body {
   color: $black-font;
   font-family: Brandon L;
@@ -51,77 +48,87 @@ header {
   font-size: 1em;
   letter-spacing: 0.1em;
 
+  @media (max-width: 600px) {
+    text-transform: lowercase;
+  }
+
   div img {
     max-width: 130px;
   }
 
-  nav ul {
-    text-align: right;
-  }
+  nav {
+    
+    ul {
+      text-align: right;
 
-  nav ul li {
-    display: inline-block;
-    margin: 0 14px;
-    position: relative;
-  }
+      li {
+        display: inline-block;
+        margin: 0 14px;
+        position: relative;
+      }
 
-  nav ul li ul {
-    background: $black-font;
-    color: #fff;
-    width: auto;
-    text-align: left;
-    padding: 10px;
-    position: absolute;
-    top: 2em;
-    right: 1px;
-    display: none;
-  }
+      ul {
+        background: $black-font;
+        color: #fff;
+        width: auto;
+        text-align: left;
+        padding: 10px;
+        position: absolute;
+        top: 2em;
+        right: 1px;
+        display: none;
 
-  nav ul li ul a{
-    color: #fff;
+        a {
+          color: #fff;
 
-    &:hover{
-      color: grey;
+          &:hover {
+            color: grey;
+          }
+        }
+
+        li {
+          display: block;
+          white-space: nowrap;
+        }
+      }
     }
   }
 
-  nav ul li ul li{
-    display: block;
-    white-space: nowrap;
+  .up-effect {
+    animation: upEffect 300ms ease-in-out forwards;
   }
 
-  
-  .shortfilms:hover{
-    ul{
+  .shortfilms:hover {
+    ul {
       display: block;
     }
   }
 
-  .technology:hover{
-    ul{
+  .technology:hover {
+    ul {
       display: block;
     }
   }
 
-  .careers:hover{
-    ul{
+  .careers:hover {
+    ul {
       display: block;
     }
   }
 
-  .extras:hover{
-    ul{
+  .extras:hover {
+    ul {
       display: block;
     }
   }
 
-  .about:hover{
-    ul{
+  .about:hover {
+    ul {
       display: block;
     }
   }
 
-  
+
 }
 
 .hero {
