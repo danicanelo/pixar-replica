@@ -22,14 +22,6 @@ $black-font: #1d1d1d;
 
 // ----------------------------------------------
 
-.hide{
-  display: none;
-}
-
-.show{
-  display: block;
-}
-
 body {
   color: $black-font;
   font-family: Brandon L;
@@ -103,10 +95,11 @@ header {
   nav {
     display: flex;
     align-items: center;
+    padding-right: 5em;
 
-    @media (max-width: 600px) {
-      // display: none;
-    }
+    // @media (max-width: 600px) {
+    //   display: none;
+    // }
 
     ul {
       text-align: right;
@@ -124,7 +117,7 @@ header {
         top: 0;
         left: 0;
         text-align: left;
-        // display: none;
+        display: none;
       }
 
       li {
@@ -144,8 +137,6 @@ header {
         text-align: left;
         padding: 10px;
         position: absolute;
-        top: 2em;
-        right: 1px;
         display: none;
 
         a {

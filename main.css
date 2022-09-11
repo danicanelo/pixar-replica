@@ -22,14 +22,6 @@
     transform: translateY(0em);
   }
 }
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
 body {
   color: #1d1d1d;
   font-family: Brandon L;
@@ -98,6 +90,7 @@ header svg {
 header nav {
   display: flex;
   align-items: center;
+  padding-right: 5em;
 }
 header nav ul {
   text-align: right;
@@ -116,6 +109,7 @@ header nav ul {
     top: 0;
     left: 0;
     text-align: left;
+    display: none;
   }
 }
 header nav ul li {
@@ -134,8 +128,6 @@ header nav ul ul {
   text-align: left;
   padding: 10px;
   position: absolute;
-  top: 2em;
-  right: 1px;
   display: none;
 }
 header nav ul ul a {
