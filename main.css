@@ -22,6 +22,14 @@
     transform: translateY(0em);
   }
 }
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 body {
   color: #1d1d1d;
   font-family: Brandon L;
@@ -42,25 +50,50 @@ a:hover {
 header {
   width: 100vw;
   height: 11vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   font-size: 1em;
   letter-spacing: 0.1em;
 }
 @media (max-width: 600px) {
   header {
-    display: none;
+    height: 5vh;
   }
 }
 header div {
   display: flex;
   align-items: center;
+  position: relative;
 }
 header div a {
   padding-left: 10em;
 }
+@media (max-width: 600px) {
+  header div a {
+    padding-left: 10px;
+  }
+}
 header div img {
   max-width: 130px;
+}
+@media (max-width: 600px) {
+  header div img {
+    max-width: 80px;
+  }
+}
+header svg {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+@media (max-width: 600px) {
+  header svg {
+    display: block;
+    height: auto;
+    width: 30px;
+    margin-right: 20px;
+  }
 }
 header nav {
   display: flex;
@@ -68,11 +101,31 @@ header nav {
 }
 header nav ul {
   text-align: right;
+  position: relative;
+}
+@media (max-width: 600px) {
+  header nav ul {
+    background: white;
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    font-weight: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: left;
+  }
 }
 header nav ul li {
   display: inline-block;
   margin: 0 14px;
-  position: relative;
+}
+@media (max-width: 600px) {
+  header nav ul li {
+    display: block;
+  }
 }
 header nav ul ul {
   background: #1d1d1d;
