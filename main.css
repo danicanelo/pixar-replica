@@ -124,12 +124,24 @@ header .about:hover ul {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 600px) {
+  .hero {
+    height: 25vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right;
+  }
+}
 .hero img {
-  padding-right: 35em;
+  padding: 0 600px 0 30px;
+}
+@media (max-width: 600px) {
+  .hero img {
+    padding: 30px;
+  }
 }
 
 .content {
-  background: lightgreen;
   width: 85vw;
   height: 70vh;
   margin: auto;
@@ -138,6 +150,15 @@ header .about:hover ul {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
+}
+@media (max-width: 600px) {
+  .content {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    padding: 40px 0 40px 0;
+  }
 }
 .content a {
   display: inline-block;
@@ -148,7 +169,7 @@ header .about:hover ul {
 }
 @media (max-width: 600px) {
   .content img {
-    width: 90%;
+    padding: 20px;
   }
 }
 .content p {
@@ -157,12 +178,12 @@ header .about:hover ul {
 }
 @media (max-width: 600px) {
   .content p {
-    font-size: 0.4em;
+    font-size: 1em;
+    padding: 0 17px 17px 17px;
   }
 }
 
 footer {
-  background: lightseagreen;
   font-family: Brandon L;
   font-size: 0.9em;
   text-align: center;
@@ -171,7 +192,7 @@ footer {
 }
 @media (max-width: 600px) {
   footer {
-    font-size: 0.4em;
+    font-size: 1em;
   }
 }
 footer ul {
@@ -193,6 +214,11 @@ footer ul li svg:hover {
 footer .links {
   margin-bottom: 14px;
   padding-top: 2vh;
+}
+@media (max-width: 600px) {
+  footer .links {
+    padding: 20px;
+  }
 }
 footer .links a {
   text-decoration: underline;

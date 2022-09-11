@@ -152,14 +152,24 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 600px) {
+    height: 25vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: right;
+  }
 
   img {
-    padding-right: 35em;
+    padding: 0 600px 0 30px;
+
+    @media (max-width: 600px) {
+      padding: 30px;
+    }
   }
 }
 
 .content {
-  background: lightgreen;
+  // background: lightgreen;
   width: 85vw;
   height: 70vh;
   margin: auto;
@@ -168,6 +178,14 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
+
+  @media (max-width: 600px) {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    padding: 40px 0 40px 0;
+  }
 
   a {
     display: inline-block;
@@ -178,7 +196,7 @@ header {
     padding: 17px 0;
 
     @media (max-width: 600px) {
-      width: 90%;
+        padding: 20px;
     }
   }
 
@@ -187,13 +205,14 @@ header {
     padding: 17px;
 
     @media (max-width: 600px) {
-      font-size: 0.4em;
+      font-size: 1em;
+      padding: 0 17px 17px 17px;
     }
   }
 }
 
 footer {
-  background: lightseagreen;
+  // background: lightseagreen;
   font-family: Brandon L;
   font-size: 0.9em;
   text-align: center;
@@ -201,7 +220,7 @@ footer {
   letter-spacing: 0.2em;
 
   @media (max-width: 600px) {
-    font-size: 0.4em;
+    font-size: 1em;
   }
 
   ul {
@@ -229,6 +248,10 @@ footer {
   .links {
     margin-bottom: 14px;
     padding-top: 2vh;
+
+    @media (max-width: 600px) {
+      padding: 20px;
+    }
 
     a {
       text-decoration: underline;
