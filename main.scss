@@ -172,6 +172,7 @@ footer {
 
       svg:hover {
         color: $black-font;
+        cursor: pointer;
       }
     }
   }
@@ -184,5 +185,4 @@ footer {
       text-decoration: underline;
     }
   }
-
 }
