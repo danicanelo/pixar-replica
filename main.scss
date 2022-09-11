@@ -8,7 +8,21 @@
   src: url("src/fonts/brandon-grotesque-light.otf");
 }
 
+@keyframes upEffect{
+  0%{
+    transform: translateY(1em);
+  }
+ 
+  100%{
+    transform: translateY(0em);
+  }
+}
+
 $black-font: #1d1d1d;
+
+.up-effect{
+  animation: upEffect 300ms ease-in-out forwards;
+}
 
 // ----------------
 body {
@@ -18,13 +32,13 @@ body {
   text-transform: uppercase;
 }
 
-a{
+a {
   color: $black-font;
-  text-decoration: underline;
   text-underline-offset: 5px;
-  transition: border-color .15s ease-out,color .15s ease-out;
-  &:hover{
-    color: rgba(29,29,29,.6);
+  transition: border-color .15s ease-out, color .15s ease-out;
+
+  &:hover {
+    color: rgba(29, 29, 29, .6);
   }
 }
 
@@ -48,7 +62,61 @@ header {
   nav ul li {
     display: inline-block;
     margin: 0 14px;
+    position: relative;
   }
+
+  nav ul li ul {
+    background: $black-font;
+    color: #fff;
+    width: 250px;
+    text-align: left;
+    padding: 10px;
+    position: absolute;
+    top: 2em;
+    left: 0;
+    display: none;
+  }
+
+  nav ul li ul a{
+    color: #fff;
+
+    &:hover{
+      color: grey;
+    }
+  }
+
+  
+  .shortfilms:hover{
+    ul{
+      display: block;
+    }
+  }
+
+  .technology:hover{
+    ul{
+      display: block;
+    }
+  }
+
+  .careers:hover{
+    ul{
+      display: block;
+    }
+  }
+
+  .extras:hover{
+    ul{
+      display: block;
+    }
+  }
+
+  .about:hover{
+    ul{
+      display: block;
+    }
+  }
+
+  
 }
 
 .hero {
@@ -89,15 +157,22 @@ footer {
 
   ul {
     padding: 20px 0;
+    display: inline-block;
+
+    &:hover {
+      li svg {
+        color: rgb(179, 179, 179);
+        transition: border-color .35s ease-out, color .25s ease-out;
+      }
+    }
 
     li {
       display: inline-block;
-      margin: 0 6px;
-    }
+      margin: 0 5px;
 
-    img {
-      width: auto;
-      height: 24px;
+      svg:hover {
+        color: $black-font;
+      }
     }
   }
 
@@ -105,10 +180,9 @@ footer {
     margin-bottom: 14px;
     padding-top: 20px;
 
-    a::after {
-      content: " | ";
+    a {
+      text-decoration: underline;
     }
   }
-
 
 }

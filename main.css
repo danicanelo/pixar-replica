@@ -6,6 +6,27 @@
   font-family: Brandon L;
   src: url("src/fonts/brandon-grotesque-light.otf");
 }
+@-webkit-keyframes upEffect {
+  0% {
+    transform: translateY(1em);
+  }
+  100% {
+    transform: translateY(0em);
+  }
+}
+@keyframes upEffect {
+  0% {
+    transform: translateY(1em);
+  }
+  100% {
+    transform: translateY(0em);
+  }
+}
+.up-effect {
+  -webkit-animation: upEffect 300ms ease-in-out forwards;
+          animation: upEffect 300ms ease-in-out forwards;
+}
+
 body {
   color: #1d1d1d;
   font-family: Brandon;
@@ -15,7 +36,6 @@ body {
 
 a {
   color: #1d1d1d;
-  text-decoration: underline;
   text-underline-offset: 5px;
   transition: border-color 0.15s ease-out, color 0.15s ease-out;
 }
@@ -40,6 +60,39 @@ header nav ul {
 header nav ul li {
   display: inline-block;
   margin: 0 14px;
+  position: relative;
+}
+header nav ul li ul {
+  background: #1d1d1d;
+  color: #fff;
+  width: 250px;
+  text-align: left;
+  padding: 10px;
+  position: absolute;
+  top: 2em;
+  left: 0;
+  display: none;
+}
+header nav ul li ul a {
+  color: #fff;
+}
+header nav ul li ul a:hover {
+  color: grey;
+}
+header .shortfilms:hover ul {
+  display: block;
+}
+header .technology:hover ul {
+  display: block;
+}
+header .careers:hover ul {
+  display: block;
+}
+header .extras:hover ul {
+  display: block;
+}
+header .about:hover ul {
+  display: block;
 }
 
 .hero {
@@ -75,19 +128,23 @@ footer {
 }
 footer ul {
   padding: 20px 0;
+  display: inline-block;
+}
+footer ul:hover li svg {
+  color: rgb(179, 179, 179);
+  transition: border-color 0.35s ease-out, color 0.25s ease-out;
 }
 footer ul li {
   display: inline-block;
-  margin: 0 6px;
+  margin: 0 5px;
 }
-footer ul img {
-  width: auto;
-  height: 24px;
+footer ul li svg:hover {
+  color: #1d1d1d;
 }
 footer .links {
   margin-bottom: 14px;
   padding-top: 20px;
 }
-footer .links a::after {
-  content: " | ";
+footer .links a {
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */
