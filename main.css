@@ -39,6 +39,7 @@ a:hover {
 }
 
 header {
+  width: 100vw;
   height: 100px;
   padding: 38px 118px 38px 118px;
   display: grid;
@@ -48,7 +49,7 @@ header {
 }
 @media (max-width: 600px) {
   header {
-    text-transform: lowercase;
+    display: none;
   }
 }
 header div img {
@@ -104,16 +105,35 @@ header .about:hover ul {
 }
 
 .hero {
+  width: 100vw;
   background-image: url("src/img/lightyear-hero.jpg");
   background-size: cover;
   padding: 250px;
+  display: flex;
+  align-content: center;
+}
+@media (max-width: 600px) {
+  .hero {
+    background-size: cover;
+    padding: 0;
+  }
+  .hero img {
+    padding: 5em 0;
+    width: 50vw;
+  }
 }
 
 .content {
+  width: 100vw;
   letter-spacing: 0.2em;
   padding: 150px 142px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
 }
 .content a {
   display: inline-block;
@@ -122,9 +142,20 @@ header .about:hover ul {
   width: 500px;
   padding: 17px 0;
 }
+@media (max-width: 600px) {
+  .content img {
+    width: 90%;
+    padding: 0;
+  }
+}
 .content p {
   text-align: center;
   padding: 17px;
+}
+@media (max-width: 600px) {
+  .content p {
+    font-size: 0.5em;
+  }
 }
 
 footer {

@@ -27,6 +27,7 @@ body {
   font-family: Brandon L;
   font-weight: bold;
   text-transform: uppercase;
+  // width: 100vw;
 }
 
 a {
@@ -41,6 +42,7 @@ a {
 
 header {
   // background: lightcoral;
+  width: 100vw;
   height: 100px;
   padding: 38px 118px 38px 118px;
   display: grid;
@@ -49,7 +51,7 @@ header {
   letter-spacing: 0.1em;
 
   @media (max-width: 600px) {
-    text-transform: lowercase;
+    display: none;
   }
 
   div img {
@@ -57,7 +59,7 @@ header {
   }
 
   nav {
-    
+
     ul {
       text-align: right;
 
@@ -132,17 +134,35 @@ header {
 }
 
 .hero {
+  width: 100vw;
   background-image: url("src/img/lightyear-hero.jpg");
   background-size: cover;
   padding: 250px;
+  display: flex;
+  align-content: center;
+
+  @media (max-width: 600px) {
+    background-size: cover;
+    padding: 0;
+
+    img {
+      padding: 5em 0;
+      width: 50vw;
+    }
+  }
 }
 
 .content {
   // background: lightgreen;
+  width: 100vw;
   letter-spacing: 0.2em;
   padding: 150px 142px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 
   a {
     display: inline-block;
@@ -151,11 +171,20 @@ header {
   img {
     width: 500px;
     padding: 17px 0;
+
+    @media (max-width: 600px) {
+      width: 90%;
+    }
   }
 
   p {
     text-align: center;
     padding: 17px;
+
+    @media (max-width: 600px) {
+      font-size: 0.4em;
+      padding
+    }
   }
 }
 
@@ -167,9 +196,15 @@ footer {
   padding-bottom: 60px;
   letter-spacing: 0.2em;
 
+  @media (max-width: 600px) {
+    font-size: 0.4em;
+  }
+
   ul {
     padding: 20px 0;
     display: inline-block;
+
+    
 
     &:hover {
       li svg {
