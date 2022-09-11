@@ -95,9 +95,21 @@ header svg {
     margin-right: 20px;
   }
 }
+header .cont-principal-mobile {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
 header nav {
   display: flex;
   align-items: center;
+}
+@media (max-width: 600px) {
+  header nav {
+    display: none;
+  }
 }
 header nav ul {
   text-align: right;

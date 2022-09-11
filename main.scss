@@ -100,12 +100,20 @@ header {
     
   }
 
+  .cont-principal-mobile{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+  }
+
   nav {
     display: flex;
     align-items: center;
 
     @media (max-width: 600px) {
-      // display: none;
+      display: none;
     }
 
     ul {
@@ -124,7 +132,6 @@ header {
         top: 0;
         left: 0;
         text-align: left;
-        // display: none;
       }
 
       li {

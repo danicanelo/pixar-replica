@@ -8,7 +8,9 @@
     <title>Dani Canelo | Réplica web Pixar</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="main.js"></script>
 </head>
 
@@ -17,13 +19,42 @@
         <div>
             <a href="#"><img src="src/img/logo.jpg" alt=""></a>
         </div>
-        <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-          </svg>
+        <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
         <nav>
-            <ul id="principal" class="hide">
+            <ul id="principal">
                 <li><a href="#">Feature Films</a></li>
                 <li id="shortfilms" class="shortfilms"><a href="#">Short Films</a>
+                </li>
+                <li id="technology" class="technology"><a href="#">Technology</a>
+                </li>
+                <li id="careers" class="careers"><a href="#">Careers</a>
+                </li>
+                <li id="extras" class="extras"><a href="#">Extras</a>
+                </li>
+                <li id="about" class="about"><a href="#">About</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="cont-principal-mobile">
+            <div class="menu">
+                <ul id="principal">
+                    <li><a href="#">Feature Films</a></li>
+                    <li id="shortfilms" class="shortfilms"><a href="#">Short Films</a>
+                    </li>
+                    <li id="technology" class="technology"><a href="#">Technology</a>
+                    </li>
+                    <li id="careers" class="careers"><a href="#">Careers</a>
+                    </li>
+                    <li id="extras" class="extras"><a href="#">Extras</a>
+                    </li>
+                    <li id="about" class="about"><a href="#">About</a>
+                    </li>
+                </ul>
+                <div>
                     <ul class="up-effect">
                         <li><a href="#">Theatrical shorts</a></li>
                         <li><a href="#">Disney+</a></li>
@@ -32,23 +63,17 @@
                         <li><a href="#">Toy Story toons</a></li>
                         <li><a href="#">Home entertainment</a></li>
                     </ul>
-                </li>
-                <li id="technology" class="technology"><a href="#">Technology</a>
                     <ul class="up-effect">
                         <li><a href="#">Renderman</a></li>
                         <li><a href="#">Usd</a></li>
                         <li><a href="#">Research and open source</a></li>
                     </ul>
-                </li>
-                <li id="careers" class="careers"><a href="#">Careers</a>
                     <ul class="up-effect">
                         <li><a href="#">Careers at Pixar</a></li>
                         <li><a href="#">Internships</a></li>
                         <li><a href="#">Life at Pixar</a></li>
                         <li><a href="#">Events</a></li>
                     </ul>
-                </li>
-                <li id="extras" class="extras"><a href="#">Extras</a>
                     <ul class="up-effect">
                         <li><a href="#">Art exhibition</a></li>
                         <li><a href="#">Emotions at play</a></li>
@@ -56,8 +81,6 @@
                         <li><a href="#">Pixar in concert</a></li>
                         <li><a href="#">Pixar in a box</a></li>
                     </ul>
-                </li>
-                <li id="about" class="about"><a href="#">About</a>
                     <ul class="up-effect">
                         <li><a href="#">Contact us</a></li>
                         <li><a href="#">Leadership</a></li>
@@ -67,9 +90,13 @@
                         <li><a href="#">Our story</a></li>
                         <li><a href="#">Company FAQ's</a></li>
                     </ul>
-                </li>
-            </ul>
-        </nav>
+                </div>
+            </div>
+            <button class="close-button">
+                x
+            </button>
+
+        </div>
     </header>
 
     <section class="hero">
