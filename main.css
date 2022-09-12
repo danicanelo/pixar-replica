@@ -43,6 +43,7 @@ header {
   width: 100vw;
   height: 11vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   font-size: 1em;
   letter-spacing: 0.1em;
@@ -54,6 +55,7 @@ header {
 }
 header div {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   position: relative;
 }
@@ -89,6 +91,7 @@ header svg {
 }
 header nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding-right: 5em;
 }
@@ -166,6 +169,7 @@ header .about:hover ul {
   background-image: url("src/img/lightyear-hero.jpg");
   background-size: cover;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -193,6 +197,7 @@ header .about:hover ul {
   letter-spacing: 0.2em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
   align-items: center;
   justify-items: center;
 }
@@ -209,7 +214,7 @@ header .about:hover ul {
   display: inline-block;
 }
 .content img {
-  width: 500px;
+  width: 100%;
   padding: 17px 0;
 }
 @media (max-width: 600px) {
