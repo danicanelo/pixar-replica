@@ -203,7 +203,11 @@ header .about:hover ul {
   display: block;
 }
 @media (max-width: 600px) {
-  header .shortfilms::after, header .technology::after, header .careers::after, header .extras::after, header .about::after {
+  header .shortfilms::after,
+header .technology::after,
+header .careers::after,
+header .extras::after,
+header .about::after {
     content: ">>";
   }
 }

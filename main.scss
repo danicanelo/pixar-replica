@@ -113,7 +113,7 @@ header {
       left: 15px;
       margin-left: 1rem;
 
-      &::before{
+      &::before {
         content: "<<";
       }
     }
@@ -235,8 +235,13 @@ header {
   }
 
   @media (max-width: 600px) {
-    .shortfilms, .technology, .careers, .extras, .about{
-      &::after{
+
+    .shortfilms,
+    .technology,
+    .careers,
+    .extras,
+    .about {
+      &::after {
         content: ">>";
       }
     }

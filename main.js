@@ -1,15 +1,20 @@
-$( document ).ready(function() {
+$(document).ready(function () {
 
-    $("#burger").click(function(){
-        $("#principal").slideToggle("slow");
-    })
+    var x = window.matchMedia("(max-width: 600px)")
 
-    $("#shortfilms, #technology, #careers, #extras, #about").click(function(){
-        $(".back").show();
-    })
+    if (x.matches) { // If media query matches
+        $(".back").click(function () {
+            $(".back").hide();
+        })
 
-    $(".back").click(function(){
-        $(".back").hide();
-    })
+        $("#burger").click(function () {
+            $("#principal").slideToggle("slow");
+        })
+
+        $("#shortfilms, #technology, #careers, #extras, #about").click(function () {
+            $(".back").show();
+        })
+    }
 
 });
+
