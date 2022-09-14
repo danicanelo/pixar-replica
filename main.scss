@@ -27,7 +27,7 @@ body {
   font-family: Brandon L;
   font-weight: bold;
   text-transform: uppercase;
-  width: 100vw;
+  width: 100%;
 }
 
 a {
@@ -49,24 +49,24 @@ header {
   justify-content: space-between;
   font-size: 1em;
   letter-spacing: 0.1em;
+  position: relative;
 
   @media (max-width: 600px) {
     height: 5vh;
   }
 
-  div {
+  .logo-box {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    position: relative;
+    // position: relative;
 
     a {
       padding-left: 10em;
-      
+
       @media (max-width: 600px) {
         padding-left: 10px;
       }
-      
     }
 
     img {
@@ -79,7 +79,6 @@ header {
   }
 
   svg {
-
     display: none;
     position: absolute;
     right: 0;
@@ -91,7 +90,6 @@ header {
       width: 30px;
       margin-right: 20px;
     }
-    
   }
 
   nav {
@@ -104,6 +102,22 @@ header {
     //   display: none;
     // }
 
+    p {
+      color: $black-font;
+      font-weight: 100;
+      display: none;
+      font-size: 1.2em;
+      text-transform: capitalize;
+      z-index: 5;
+      position: absolute;
+      left: 15px;
+      margin-left: 1rem;
+
+      &::before{
+        content: "<<";
+      }
+    }
+
     ul {
       text-align: right;
       position: relative;
@@ -112,7 +126,7 @@ header {
         background: white;
         width: 80%;
         height: 100%;
-        padding: 20px;
+        padding: 20px 20px 20px 20px;
         text-transform: capitalize;
         font-size: 1.2em;
         font-weight: 100;
@@ -130,7 +144,6 @@ header {
         @media (max-width:600px) {
           display: block;
         }
-
       }
 
       ul {
@@ -147,6 +160,15 @@ header {
 
           &:hover {
             color: grey;
+
+            @media (max-width:600px) {
+              color: $black-font;
+            }
+          }
+
+          @media (max-width:600px) {
+            color: $black-font;
+            font-size: 1.2rem;
           }
         }
 
@@ -154,9 +176,29 @@ header {
           display: block;
           white-space: nowrap;
         }
+
+        @media (max-width:600px) {
+          background: white;
+          width: 80%;
+          height: 100%;
+          padding: 50px 20px 20px 20px;
+          text-transform: capitalize;
+          font-size: 1.2em;
+          font-weight: 100;
+          position: fixed;
+          top: 0;
+          left: 0;
+          text-align: left;
+        }
       }
     }
   }
+
+  // .mobile-menu{
+  //   background: lightpink;
+  //   width: 80vw;
+  //   height: 100vh;
+  // }
 
   .up-effect {
     animation: upEffect 300ms ease-in-out forwards;
@@ -189,6 +231,14 @@ header {
   .about:hover {
     ul {
       display: block;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .shortfilms, .technology, .careers, .extras, .about{
+      &::after{
+        content: ">>";
+      }
     }
   }
 

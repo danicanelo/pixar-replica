@@ -27,7 +27,7 @@ body {
   font-family: Brandon L;
   font-weight: bold;
   text-transform: uppercase;
-  width: 100vw;
+  width: 100%;
 }
 
 a {
@@ -47,31 +47,31 @@ header {
   justify-content: space-between;
   font-size: 1em;
   letter-spacing: 0.1em;
+  position: relative;
 }
 @media (max-width: 600px) {
   header {
     height: 5vh;
   }
 }
-header div {
+header .logo-box {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  position: relative;
 }
-header div a {
+header .logo-box a {
   padding-left: 10em;
 }
 @media (max-width: 600px) {
-  header div a {
+  header .logo-box a {
     padding-left: 10px;
   }
 }
-header div img {
+header .logo-box img {
   max-width: 130px;
 }
 @media (max-width: 600px) {
-  header div img {
+  header .logo-box img {
     max-width: 80px;
   }
 }
@@ -95,6 +95,20 @@ header nav {
   align-items: center;
   padding-right: 5em;
 }
+header nav p {
+  color: #1d1d1d;
+  font-weight: 100;
+  display: none;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  z-index: 5;
+  position: absolute;
+  left: 15px;
+  margin-left: 1rem;
+}
+header nav p::before {
+  content: "<<";
+}
 header nav ul {
   text-align: right;
   position: relative;
@@ -104,7 +118,7 @@ header nav ul {
     background: white;
     width: 80%;
     height: 100%;
-    padding: 20px;
+    padding: 20px 20px 20px 20px;
     text-transform: capitalize;
     font-size: 1.2em;
     font-weight: 100;
@@ -139,9 +153,35 @@ header nav ul ul a {
 header nav ul ul a:hover {
   color: grey;
 }
+@media (max-width: 600px) {
+  header nav ul ul a:hover {
+    color: #1d1d1d;
+  }
+}
+@media (max-width: 600px) {
+  header nav ul ul a {
+    color: #1d1d1d;
+    font-size: 1.2rem;
+  }
+}
 header nav ul ul li {
   display: block;
   white-space: nowrap;
+}
+@media (max-width: 600px) {
+  header nav ul ul {
+    background: white;
+    width: 80%;
+    height: 100%;
+    padding: 50px 20px 20px 20px;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    font-weight: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: left;
+  }
 }
 header .up-effect {
   -webkit-animation: upEffect 300ms ease-in-out forwards;
@@ -161,6 +201,11 @@ header .extras:hover ul {
 }
 header .about:hover ul {
   display: block;
+}
+@media (max-width: 600px) {
+  header .shortfilms::after, header .technology::after, header .careers::after, header .extras::after, header .about::after {
+    content: ">>";
+  }
 }
 
 .hero {
