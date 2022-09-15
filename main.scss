@@ -103,6 +103,7 @@ header {
     // }
 
     p {
+      padding-top: 20px;
       color: $black-font;
       font-weight: 100;
       display: none;
@@ -202,6 +203,10 @@ header {
 
   .up-effect {
     animation: upEffect 300ms ease-in-out forwards;
+
+    @media (max-width: 600px) {
+      animation: none;
+    }
   }
 
   .shortfilms:hover {

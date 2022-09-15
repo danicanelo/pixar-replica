@@ -96,6 +96,7 @@ header nav {
   padding-right: 5em;
 }
 header nav p {
+  padding-top: 20px;
   color: #1d1d1d;
   font-weight: 100;
   display: none;
@@ -186,6 +187,12 @@ header nav ul ul li {
 header .up-effect {
   -webkit-animation: upEffect 300ms ease-in-out forwards;
           animation: upEffect 300ms ease-in-out forwards;
+}
+@media (max-width: 600px) {
+  header .up-effect {
+    -webkit-animation: none;
+            animation: none;
+  }
 }
 header .shortfilms:hover ul {
   display: block;
